@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - '8'
+before_install:
+install: ./install.sh
+env:
+  - DB=DB
+script:
+  - test.sh
+deploy:
+  on: 
+    branch: master
+    branch: release
+    branch: feature
+    tags: true
+notifications:
+  slack:
+    on_success: always
+  email:
+    - wyliuxsen@163.com
+
