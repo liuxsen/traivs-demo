@@ -6,7 +6,7 @@ install: ./install.sh
 env:
   - DB=DB
 script:
-  - test.sh
+  - run.sh
 deploy:
   on: 
     branch: master
